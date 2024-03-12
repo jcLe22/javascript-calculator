@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: hsl(216, 18%, 16%);
+}
+
+#calculator {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    grid-template-areas:
+        "display display display display"
+        "clear divide times minus"
+        "seven eight nine plus"
+        "four five six plus"
+        "one two three equals"
+        "zero zero dot equals";
+    grid-gap: 8px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 85%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+button:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+button:active {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#display {
+    grid-area: display;
+    background-color: #76ABAE;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#equals {
+    grid-area: equals;
+    height: 100%;
+}
+
+#dot {
+    height: 100%;
+}
+
+#zero {
+    grid-area: zero;
+    height: 70px;
+}
